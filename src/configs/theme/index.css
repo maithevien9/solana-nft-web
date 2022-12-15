@@ -53,6 +53,10 @@ textarea.ant-input {
   border-color: #434242 !important;
 }
 
+.ant-table-cell-row-hover {
+  background-color: #2b2b2b !important;
+}
+
 .ant-table-cell:hover {
   background-color: #2b2b2b !important;
   color: white;

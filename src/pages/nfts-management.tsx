@@ -33,7 +33,7 @@ const projectId = '2IcFd9q8opGynfMEI2l9Zj6y4lh';
 const projectSecret = '7eed3b6d8ab65155aefa60ea4e90051b';
 const authorization = `Basic ${btoa(`${projectId}:${projectSecret}`)}`;
 
-const handleGetStatusColor = (status: string) => {
+export const handleGetStatusColor = (status: string) => {
   switch (status) {
     case 'rejected':
       return '#FC424A';

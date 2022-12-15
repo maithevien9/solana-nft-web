@@ -93,25 +93,26 @@ export default function DashboardPage() {
         return (
           <div
             className={classNames({
-              ['border-green-500 text-green-500']: status === 'approved',
-              ['border-red-500 text-red-500']: status === 'rejected',
-              ['border-yellow-500 text-yellow-500']: status === 'pending',
+              'border-green-500 text-green-500': status === 'approved',
+              'border-red-500 text-red-500': status === 'rejected',
+              'border-yellow-500 text-yellow-500': status === 'pending',
             })}
           >
             <Tag
               className={`px-4 py-1`}
               color={classNames({
-                ['green']: status === 'approved',
-                ['red']: status === 'rejected',
-                ['yellow']: status === 'pending',
+                'green': status === 'approved',
+                'red': status === 'rejected',
+                'yellow': status === 'pending',
               })}
             >
               <p
                 className={classNames({
-                  ['m-0 text-gray-200']: true,
-                  ['text-green-500']: status === 'approved',
-                  ['text-red-500']: status === 'rejected',
-                  ['text-yellow-500']: status === 'pending',
+                  'm-0 text-gray-200': true,
+                  'text-green-500': status === 'approved',
+                  'text-red-500': status === 'rejected',
+                  'text-yellow-500': status === 'pending',
+                  'text-gray-700': status === 'minted',
                 })}
               >
                 {status}
