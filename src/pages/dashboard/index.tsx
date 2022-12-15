@@ -37,7 +37,7 @@ export default function DashboardPage() {
     {
       dataIndex: 'title',
       render: (_, { title, image }) => (
-        <div className='flex flex-row items-center justify-center space-x-2'>
+        <div className='flex flex-row items-center justify-start space-x-2'>
           <Avatar src={image || 'https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg'} />
           <a className='flex items-center justify-center text-gray-200'>{title}</a>
         </div>
@@ -101,9 +101,9 @@ export default function DashboardPage() {
             <Tag
               className={`px-4 py-1`}
               color={classNames({
-                'green': status === 'approved',
-                'red': status === 'rejected',
-                'yellow': status === 'pending',
+                green: status === 'approved',
+                red: status === 'rejected',
+                yellow: status === 'pending',
               })}
             >
               <p

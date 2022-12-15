@@ -257,13 +257,16 @@ export default function NFTsManagement() {
         <>
           {row.status === 'approved' ? (
             <div className='flex gap-4'>
-              <Tag color={handleGetStatusColor(row?.status ?? '')}>{row?.status?.toUpperCase() || 'Pending'}</Tag>
+              <Tag className='flex items-center justify-center' color={handleGetStatusColor(row?.status ?? '')}>
+                {row?.status?.toUpperCase() || 'Pending'}
+              </Tag>
               <Button
-                className='flex h-6 items-center text-base'
+                className='flex h-6 items-start text-base'
+                style={{ height: 22 }}
                 onClick={() => handleUploadIpfs(row)}
                 loading={selectedNft === row.id && loading}
               >
-                Mint
+                <div className='mt-[-4px]'>Mint</div>
               </Button>
             </div>
           ) : (
