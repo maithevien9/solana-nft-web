@@ -1,4 +1,4 @@
-import { FolderOpenOutlined } from '@ant-design/icons';
+import { FileTextOutlined } from '@ant-design/icons';
 import { Avatar, Button, notification, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/lib/table';
 import classNames from 'classnames';
@@ -37,7 +37,7 @@ export default function DashboardPage() {
     {
       dataIndex: 'title',
       render: (_, { title, image }) => (
-        <div className='flex flex-row items-center justify-start space-x-2'>
+        <div className='flex flex-row items-center justify-start space-x-3'>
           <Avatar src={image || 'https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg'} />
           <a className='flex items-center justify-center text-gray-200'>{title}</a>
         </div>
@@ -57,20 +57,20 @@ export default function DashboardPage() {
     {
       dataIndex: 'docs',
       render: (_, { docs }) => (
-        <div className='flex flex-col items-center justify-center space-y-2'>
+        <div className='flex items-center justify-center gap-3'>
           {docs?.doc1 && (
             <a className='text-gray-200' href={docs.doc1}>
-              <FolderOpenOutlined size={60} />
+              <FileTextOutlined className='text-2xl text-white' />
             </a>
           )}
           {docs?.doc2 && (
             <a className='text-gray-200' href={docs.doc2}>
-              <FolderOpenOutlined size={60} />
+              <FileTextOutlined className='text-2xl text-white' />
             </a>
           )}
           {docs?.doc3 && (
             <a className='text-gray-200' href={docs.doc3}>
-              <FolderOpenOutlined size={60} />
+              <FileTextOutlined className='text-2xl text-white' />
             </a>
           )}
         </div>
@@ -99,7 +99,7 @@ export default function DashboardPage() {
             })}
           >
             <Tag
-              className={`px-4 py-1`}
+              className={`flex items-center`}
               color={classNames({
                 green: status === 'approved',
                 red: status === 'rejected',
@@ -114,6 +114,7 @@ export default function DashboardPage() {
                   'text-yellow-500': status === 'pending',
                   'text-gray-700': status === 'minted',
                 })}
+                style={{ textTransform: 'uppercase' }}
               >
                 {status}
               </p>
@@ -121,7 +122,8 @@ export default function DashboardPage() {
 
             {(status === 'pending' || !status) && (
               <Button
-                className='flex h-6 items-center text-base'
+                style={{ height: 22, marginTop: 10 }}
+                className='ml-2 flex h-6 items-center text-base'
                 onClick={() => {
                   const updates = {};
                   // @ts-ignore
@@ -136,7 +138,7 @@ export default function DashboardPage() {
                   setCount((prev) => prev + 1);
                 }}
               >
-                Approve
+                <div className='mt-[-4px] text-sm'>Approve</div>
               </Button>
             )}
           </div>

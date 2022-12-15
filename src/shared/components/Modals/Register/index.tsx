@@ -101,7 +101,7 @@ export default function RegisterModal({ isOpen, onOpen, onClose }: Props) {
             </Button>
           </Upload>
           <Tooltip placement='top' title={text}>
-            <InfoCircleOutlined className='text-[22px] text-white' />
+            <InfoCircleOutlined className='text-[22px] text-white' style={{ color: 'white' }} />
           </Tooltip>
         </div>
       </div>
@@ -162,10 +162,10 @@ export default function RegisterModal({ isOpen, onOpen, onClose }: Props) {
             <div className='flex h-[341px] w-[341px] flex-col items-center justify-center border-2 border-dashed'>
               <Image height={88} preview={false} src={uploadIcon} width={110} />
               <div className='text-lg text-white'>Drag and drop logo to upload</div>
-              <div className='mt-3 text-white'> OR </div>
+              <div className='mt-3 mb-4 text-white '> OR </div>
               <Upload customRequest={(event) => handleUploadAvatar(event, UploadType.Avatar)} name='avatar' showUploadList={false}>
                 <Button
-                  className='mt-4 w-32 rounded-sm'
+                  className='w-32 rounded-sm'
                   loading={uploadType === UploadType.Avatar && isLoadingUpload}
                   size='middle'
                   type='primary'
@@ -196,7 +196,7 @@ export default function RegisterModal({ isOpen, onOpen, onClose }: Props) {
                 },
               ]}
             >
-              <Input className='w-[336px] rounded-sm' size='middle' />
+              <Input className='mt-4 w-[336px] rounded-sm' size='middle' />
             </Form.Item>
 
             <Form.Item
@@ -250,7 +250,7 @@ export default function RegisterModal({ isOpen, onOpen, onClose }: Props) {
                   />
                 ) : (
                   <div className='flex h-[281px] w-[281px] items-center justify-center'>
-                    <FileTextOutlined className='text-3xl text-white' />
+                    <FileTextOutlined className='text-3xl text-white' style={{ color: 'white' }} />
                   </div>
                 )}
               </FileContainer>

@@ -104,3 +104,19 @@ textarea.ant-input {
 .row-table:hover {
   background-color: #434242 !important;
 }
+
+.ant-modal-header {
+  background-color: #2b2b2b !important;
+}
+
+.ant-modal-body {
+  background-color: #2b2b2b !important;
+}
+
+.ant-form-item-required {
+  margin-bottom: 10px !important;
+}
+
+.ant-btn-primary {
+  background-color: #a259ff !important;
+}
