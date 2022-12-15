@@ -103,7 +103,14 @@ export default function Nfts() {
           {nfts.map((item, index) => (
             <SwiperSlide className='transition-in-out-common mr-[120px] w-[236px] max-w-[236px] cursor-pointer' key={index}>
               <Link to={`/certificate/?symbol=${item.symbol}`}>
-                <Image className='bg-white' height={330} preview={false} src={item.image} width={330} />
+                <Image
+                  className='bg-black object-fill'
+                  height={330}
+                  preview={false}
+                  src={item.image}
+                  width={330}
+                  style={{ objectFit: 'cover' }}
+                />
                 <div className='mt-2 text-base text-white'>{item.name}</div>
                 <div className='mt-2 flex items-center gap-3 text-white '>
                   <Image preview={false} src={avatar} />

@@ -12,7 +12,8 @@ export default function Banner() {
     <div className='flex w-full'>
       <div className='flex w-3/6 flex-col justify-end gap-6 pr-32'>
         <div className='text-lg text-white'>
-          NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
+          Enouverse is trusting food safety certificate platform. We provide a place that everyone can discover trusting food suppliers or
+          mint certificate for your business.
         </div>
         <div className='flex h-16 w-56 cursor-pointer items-center justify-center gap-6 rounded-3xl bg-[#A259FF]' onClick={onOpen}>
           <Image preview={false} src={rocket} />

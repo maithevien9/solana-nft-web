@@ -9,7 +9,7 @@ export default function Footer() {
       <div className='flex  items-center justify-center gap-32'>
         <div className='flex w-3/6 justify-end gap-36'>
           <div>
-            <Image preview={false} src={logo} />
+            <Image preview={false} src={logo} style={{ width: 80 }} />
             <div className='mt-6 w-60  text-base text-[#858584]'>NFT Certifivate for Food Safety</div>
             <div className='mt-6 text-base  text-[#858584]'>Join our community</div>
           </div>

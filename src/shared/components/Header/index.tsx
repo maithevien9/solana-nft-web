@@ -26,8 +26,9 @@ export default function Header() {
   return (
     <div className='flex h-24 w-full items-center justify-center border-b-2 border-[#858584] bg-[#2B2B2B]'>
       <div className='container mx-auto flex h-full w-full  items-center justify-between'>
-        <Link className='flex' to='/'>
-          <Image preview={false} src={logo} />
+        <Link className='flex items-center gap-3' to='/'>
+          <Image preview={false} src={logo} style={{ width: 50 }} />
+          <div className='text-bold text-2xl font-bold text-white'>Enouverse</div>
         </Link>
         <div className='flex items-center gap-14'>
           <div className='flex gap-14'>

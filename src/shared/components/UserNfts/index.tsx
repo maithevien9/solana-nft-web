@@ -51,7 +51,7 @@ export default function UserNfts() {
               <Link to={`/certificate/?symbol=${item.symbol}`}>
                 <div className='flex w-[330px] flex-col justify-start'>
                   <Image
-                    className='h-[296px] w-full bg-white'
+                    className='h-[296px] w-full bg-black object-fill'
                     preview={false}
                     src={item.image}
                     style={{ height: 296, objectFit: 'cover', width: '100%' }}
