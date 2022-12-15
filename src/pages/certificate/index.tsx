@@ -84,6 +84,7 @@ export default function Certificate() {
                   name: responseJson.name,
                   symbol: responseJson.symbol,
                 });
+
               setNfts(currentImages);
             });
 
@@ -115,27 +116,31 @@ export default function Certificate() {
           </div>
           <p className='text-xl font-medium text-[#858584]'>Description</p>
           <p>The Orbitians</p>
-          <p>is a collection of 10,000 unique NFTs on the Ethereum blockchain,</p>
+          <p>This is Enouvo Coffee's certificate. We provide high quality coffee, food and open co-working space</p>
           <p>{certificate?.description}</p>
         </Col>
         <Col span={12}>
-          <Image height={300} preview={false} src={certificate?.image} width={300} />
+          <Image
+            height={300}
+            preview={false}
+            src={certificate?.image ?? 'https://nft-web.s3-ap-northeast-1.amazonaws.com/hLcLXra3vCRf2pdnRKUe3A.jpg'}
+            width={300}
+          />
         </Col>
       </Row>
       <p className='text-xl font-medium text-[#858584]'>Details</p>
       <div className='flex flex-row space-x-2'>
         <GlobeIcon />
-        <p>View on Etherscan</p>
+        <p>View on Solscan</p>
       </div>
       <div className='flex flex-row space-x-2'>
         <GlobeIcon />
-        <p>View Original</p>
+        <p>Explore Solana</p>
       </div>
       <p className='text-xl font-medium text-[#858584]'>Tag</p>
       <div className='flex flex-row space-x-3'>
-        <div className='rounded-full bg-gray-700 py-3 px-6 uppercase'>animation</div>
-        <div className='rounded-full bg-gray-700 py-3 px-6 uppercase'>illustration</div>
-        <div className='rounded-full bg-gray-700 py-3 px-6 uppercase'>moon</div>
+        <div className='rounded-full bg-gray-700 py-3 px-6 uppercase'>NFT</div>
+        <div className='rounded-full bg-gray-700 py-3 px-6 uppercase'>Certificate</div>
       </div>
     </div>
   );
